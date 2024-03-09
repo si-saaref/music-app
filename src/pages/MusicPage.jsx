@@ -73,7 +73,7 @@ export default function MusicPage() {
 					</div>
 				</div>
 				<div className='content flex flex-col items-center px-5 py-10 gap-10'>
-					<div className='description-wrapper flex gap-2 h-28 items-center'>
+					<div className='description-wrapper flex gap-2 h-28 items-center max-[400px]:flex-col'>
 						<p className='text-xl text-[#334155]'>
 							{inputMusic.length === 0 ? 'Find trending music' : 'Search result for : '}
 						</p>
