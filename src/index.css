@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:focus + label {
+	display: none;
+}
+
+.header-wrapper::after {
+	@apply top-14 bg-gradient-to-r from-[#7b34dd] to-[#a45deb];
+	content: '';
+	position: absolute;
+	height: 30px;
+	left: 0;
+	right: 0;
+	border-bottom-left-radius: 9999%;
+	border-bottom-right-radius: 9999%;
+}
+
+.gradient-bottom {
+	@apply bg-gradient-to-b from-[#712bda] to-[#a45deb];
+}
+
+.gradient-right {
+	@apply bg-gradient-to-r from-[#7b34dd] to-[#a45deb];
+}
