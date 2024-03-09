@@ -7,6 +7,7 @@ function App() {
 		<Router>
 			<div className='lg:w-2/5 md:w-2/3 sm:w-full m-auto'>
 				<Routes>
+					<Route path='*' element={<HomePage />} />
 					<Route path='/' element={<HomePage />} />
 					<Route path='/music/*' element={<MusicPage />} />
 				</Routes>
