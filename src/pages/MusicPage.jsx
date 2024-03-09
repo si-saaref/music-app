@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { useInput } from '../hooks/useInput';
 import { useMusic } from '../hooks/useMusic';
 import Modal from '../components/organisms/Modal';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ListPopularArtists } from '../utils/Data';
 import ArtistTag from '../components/molecules/ArtistTag';
 import CustomButton from '../components/molecules/Button';
@@ -17,6 +17,12 @@ export default function MusicPage() {
 	const { musicData, setMusicData } = useMusic();
 
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (musicData.length === 0) {
+			navigate('/music', { replace: true });
+		}
+	}, [musicData, navigate]);
 
 	const loadMoreMusic = async () => {
 		setIsLoading((prevVal) => !prevVal);
