@@ -74,10 +74,10 @@ export default function MusicPage() {
 				</div>
 				<div className='content flex flex-col items-center px-5 py-10 gap-10'>
 					<div className='description-wrapper flex gap-2 h-28 items-center max-[400px]:flex-col'>
-						<p className='text-xl text-[#334155]'>
+						<p className='text-xl text-[#334155] font-roboto'>
 							{inputMusic.length === 0 ? 'Find trending music' : 'Search result for : '}
 						</p>
-						<p className='text-xl text-[#7b34dd] font-bold'>{inputMusic}</p>
+						<p className='text-xl text-[#7b34dd] font-bold font-roboto'>{inputMusic}</p>
 					</div>
 					<div className='list-item-wrapper flex flex-col items-center justify-center gap-5 w-full'>
 						{inputMusic.length === 0 ? (
@@ -89,7 +89,7 @@ export default function MusicPage() {
 						) : musicData.length === 0 ? (
 							<div className='flex justify-center flex-col items-center'>
 								<TbDatabaseX className='text-9xl text-gray-400' />
-								<h1>There is no song found</h1>
+								<h1 className='font-roboto'>There is no song found</h1>
 							</div>
 						) : (
 							musicData.map((music, idx) => <Card music={music} key={idx} />)
@@ -98,7 +98,7 @@ export default function MusicPage() {
 					<div className='action-button-wrapper'>
 						{musicData.length >= 4 && (
 							<CustomButton
-								className='rounded-full bg-[#e2e8f0] text-lg text-[#64748b] py-3 px-10 font-bold'
+								className='rounded-full bg-[#e2e8f0] text-lg text-[#64748b] py-3 px-10 font-bold font-roboto'
 								onClick={loadMoreMusic}
 								isLoading={isLoading}
 								loaderBlack

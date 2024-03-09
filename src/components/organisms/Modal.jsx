@@ -53,7 +53,8 @@ export default function Modal({ handleClose }) {
 				<div className='action-button self-end p-3'>
 					<IoClose className='text-white text-5xl cursor-pointer' onClick={handleClose} />
 				</div>
-				<div className='action-button-wrapper bottom-5 flex flex-col gap-3 w-full px-14 max-[320px]:px-2 flex-1 items-center justify-center'>
+				<div className='action-button-wrapper bottom-5 flex flex-col gap-8 w-full px-14 max-[320px]:px-2 flex-1 items-center justify-center'>
+					<h1 className='text-white text-4xl mb-10 font-roboto'>Search</h1>
 					<div className='relative w-full'>
 						<input
 							className='bg-white w-full py-3 rounded-full text-[#64748b] font-bold px-4 font-roboto'
