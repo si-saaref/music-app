@@ -25,7 +25,7 @@ export default function ArtistTag({ name }) {
 
 	return (
 		<button
-			className='bg-gradient-to-r from-[#7b34dd] to-[#a45deb] py-1 px-4 rounded-full text-white'
+			className='bg-gradient-to-r from-[#7b34dd] to-[#a45deb] py-1 px-4 rounded-full text-white font-roboto'
 			onClick={searchMusic}
 		>
 			{name}
